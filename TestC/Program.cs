@@ -14,7 +14,7 @@ namespace TestingIntegralX
                 return;
             }
             Do(args[0]);
-            Console.ReadKey(true);
+            Console.WriteLine("Результат сохранён в result.txt");
         }
 
         static void Do(string fileName)
@@ -46,7 +46,7 @@ namespace TestingIntegralX
                     output.Add(result!);
                     if (splitExpected.Length == 1)
                     {
-                        output.Add(result != input[l + 2] ? "NOT PASSED" : "PASSED");
+                        output.Add(result != input[l + 2] ? "!!!NOT PASSED" : "PASSED");
                     }
                     else
                     {
