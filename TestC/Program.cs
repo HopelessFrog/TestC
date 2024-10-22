@@ -10,15 +10,14 @@ namespace TestingIntegralX
             Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
             if (args.Length == 0)
             {
-                Console.WriteLine("Программа требует минимум 1 аргумент: название файла с тест кейсами");
+                Console.WriteLine("Введите название файла в качестве аргумента");
                 return;
             }
-            Analyze(args[0]);
-            Console.WriteLine("Работа программы завершена, нажмите любую клавишу, чтобы продолжить...");
+            Do(args[0]);
             Console.ReadKey(true);
         }
 
-        static void Analyze(string fileName)
+        static void Do(string fileName)
         {
             var input = File.ReadAllLines(fileName);
             int caseCount = input.Length / 4;
