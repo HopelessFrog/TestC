@@ -53,7 +53,7 @@ namespace TestingIntegralX
                         var splitRes = result.Split(" = ");
                         if (splitRes.Length == 1)
                         {
-                            output.Add("NOT PASSED");
+                            output.Add("!!!NOT PASSED");
                         }
                         else
                         {
@@ -68,7 +68,7 @@ namespace TestingIntegralX
                 catch
                 {
                     output.Add("Test case data error");
-                    output.Add("NOT PASSED");
+                    output.Add("!!!NOT PASSED");
                     continue;
                 }
                 finally
